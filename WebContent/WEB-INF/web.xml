@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	version="4.0">
+	<display-name>Movies Application</display-name>
+	<description>Movies application</description>
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/swa/error.jsp</location>
+	</error-page>
+	<jsp-config>
+		<jsp-property-group>
+			<description>Movies pages</description>
+			<url-pattern>/swa/*</url-pattern>
+			<page-encoding>UTF-8</page-encoding>
+			<include-prelude>/prelude.jsp</include-prelude>
+			<include-coda>/coda.jsp</include-coda>
+		</jsp-property-group>
+	</jsp-config>
+</web-app>
